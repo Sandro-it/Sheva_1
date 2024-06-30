@@ -1,4 +1,4 @@
-import "./BiographyPage.css";
+import "../styles/BiographyPage.module.css";
 
 function BiographyPage() {
   return (

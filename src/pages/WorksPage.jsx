@@ -1,4 +1,4 @@
-import "./WorksPage.css";
+import "../styles/WorksPage.module.css";
 
 function WorksPage() {
   return (
