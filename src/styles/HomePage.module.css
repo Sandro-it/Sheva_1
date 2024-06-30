@@ -1,0 +1,27 @@
+.home-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .home-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .home-page img {
+    width: 50%;
+  }
+
+  .home-page p {
+    width: 45%;
+    font-size: 1.2em;
+  }
+}
