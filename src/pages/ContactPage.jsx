@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import styles from "../styles/ContactPage.module.css";
 
