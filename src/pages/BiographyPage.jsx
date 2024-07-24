@@ -1,4 +1,4 @@
-import styles from "../../styles/BiographyPage.module.css";
+import styles from "../styles/BiographyPage.module.css";
 
 const BiographyPage = () => {
   return (

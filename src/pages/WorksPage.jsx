@@ -1,4 +1,4 @@
-import styles from "../../styles/WorksPage.module.css";
+import styles from "../styles/WorksPage.module.css";
 
 const WorksPage = () => {
   return (
