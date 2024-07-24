@@ -1,0 +1,28 @@
+.worksPage {
+  padding: 20px;
+  text-align: left;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .worksPage {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .text {
+    font-size: 1.2em;
+  }
+}

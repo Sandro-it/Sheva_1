@@ -1,0 +1,33 @@
+.header {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navItem {
+  margin: 0 15px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    justify-content: center;
+  }
+
+  .navItem {
+    margin: 0 30px;
+  }
+}

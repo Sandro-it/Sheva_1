@@ -1,12 +1,12 @@
 import { Router, Route, Routes } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { lazy } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HomePage = lazy(() => import("./pages/HomePage"));
-import BiographyPage from "./pages/BiographyPage";
-import WorksPage from "./pages/WorksPage";
-import ContactPage from "./pages/ContactPage";
-import "./App.css";
+const HomePage = lazy(() => import("./pages/HomePage"));
+const BiographyPage = lazy(() => import("./pages/BiographyPage"));
+const WorksPage = lazy(() => import("./pages/WorksPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+import "./App.module.css";
 
 function App() {
   return (
@@ -14,10 +14,10 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" exact component={<HomePage/>} />
-          <Route path="/biography" component={<BiographyPage/>} />
-          <Route path="/works" component={<WorksPage/>} />
-          <Route path="/contact" component={<ContactPage/>} />
+          <Route path="/" exact component={<HomePage />} />
+          <Route path="/biography" component={<BiographyPage />} />
+          <Route path="/works" component={<WorksPage />} />
+          <Route path="/contact" component={<ContactPage />} />
         </Routes>
         <Footer />
       </div>
