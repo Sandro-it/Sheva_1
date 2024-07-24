@@ -28,7 +28,7 @@
 // export default App;
 
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
@@ -53,12 +53,14 @@ function App() {
   return (
     <div className={styles.App}>
       <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/biography" component={BiographyPage} />
-        <Route path="/works" component={WorksPage} />
-        <Route path="/contact" component={ContactPage} />
-      </Switch>
+      <Router>
+        <Routes>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/biography" component={BiographyPage} />
+          <Route path="/works" component={WorksPage} />
+          <Route path="/contact" component={ContactPage} />
+        </Routes>
+      </Router>
       <Footer />
     </div>
   );
