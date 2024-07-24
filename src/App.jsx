@@ -30,10 +30,10 @@
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HomePage from "./components/pages/HomePage";
-import BiographyPage from "./components/pages/BiographyPage";
-import WorksPage from "./components/pages/WorksPage";
-import ContactPage from "./components/pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import BiographyPage from "./pages/BiographyPage";
+import WorksPage from "./pages/WorksPage";
+import ContactPage from "./pages/ContactPage";
 import Loader from "./components/loader/Loader";
 import ErrorMessage from "./components/errorMessage/ErrorMessage";
 import styles from "./App.module.css";
