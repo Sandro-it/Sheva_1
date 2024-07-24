@@ -1,42 +1,24 @@
-// import styles from "../styles/ContactPage.module.css";
-
-// const ContactPage = () => {
-//   return (
-//     <div className={styles.contactPage}>
-//       <h1>Контакти</h1>
-//       <p className={styles.text}>
-//         Тут ви можете знайти інформацію про процедуру отримання ліцензій та інші
-//         правові питання.
-//       </p>
-//       <form className={styles.contactForm}>
-//         <label className={styles.label}>YourName</label>
-//         <input className={styles.input} type="text" name="name" required />
-//         <label className={styles.label}>Електронна пошта</label>
-//         <input className={styles.input} type="email" name="email" required />
-//         <label className={styles.label}>Повідомлення</label>
-//         <textarea
-//           className={styles.textarea}
-//           name="message"
-//           required
-//         ></textarea>
-//         <button className={styles.button} type="submit">
-//           Надіслати
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default ContactPage;
-
 import { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import styles from "../styles/ContactPage.module.css";
 
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("xzzpdkyl");
+  const [submitted, setSubmitted] = useState(false);
 
-  if (state.succeeded) {
+  useEffect(() => {
+    if (state.succeeded) {
+      setSubmitted(true);
+    }
+  }, [state.succeeded]);
+
+  useEffect(() => {
+    return () => {
+      setSubmitted(false);
+    };
+  }, []);
+
+  if (submitted) {
     return <p>Дякуємо за ваше повідомлення!</p>;
   }
 
@@ -94,9 +76,6 @@ const ContactPage = () => {
           Надіслати
         </button>
       </form>
-      {state.succeeded && (
-        <p className={styles.success}>Лист успішно надіслано!</p>
-      )}
     </div>
   );
 };
