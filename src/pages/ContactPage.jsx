@@ -117,26 +117,26 @@ const ContactPage = () => {
           <form className={styles.contactForm} onSubmit={handleSubmit}>
             <label className={styles.label} htmlFor="name">
               Ім'я
-              <input
-                className={styles.input}
-                type="text"
-                id="name"
-                name="name"
-                required
-                autoComplete="name"
-              />
             </label>
+            <input
+              className={styles.input}
+              type="text"
+              id="name"
+              name="name"
+              required
+              autoComplete="name"
+            />
             <label className={styles.label} htmlFor="email">
               Електронна пошта
-              <input
-                className={styles.input}
-                type="email"
-                id="email"
-                name="email"
-                required
-                autoComplete="email"
-              />
             </label>
+            <input
+              className={styles.input}
+              type="email"
+              id="email"
+              name="email"
+              required
+              autoComplete="email"
+            />
             <ValidationError
               prefix="Email"
               field="email"
@@ -144,14 +144,14 @@ const ContactPage = () => {
             />
             <label className={styles.label} htmlFor="message">
               Повідомлення
-              <textarea
-                className={styles.textarea}
-                id="message"
-                name="message"
-                required
-                autoComplete="message"
-              ></textarea>
             </label>
+            <textarea
+              className={styles.textarea}
+              id="message"
+              name="message"
+              required
+              autoComplete="message"
+            ></textarea>
             <ValidationError
               prefix="Message"
               field="message"

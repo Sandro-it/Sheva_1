@@ -1,4 +1,4 @@
-.contactPage {
+/* .contactPage {
   padding: 20px;
   text-align: center;
 }
@@ -30,6 +30,95 @@
 .textarea {
   width: 100%;
   max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #777;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #555;
+}*/
+
+/* Responsive styles for mobile devices */
+/*@media (max-width: 320px) {
+  .contactPage h1 {
+    font-size: 20px;
+  }
+
+  .contactPage p {
+    font-size: 14px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .input,
+  .textarea {
+    padding: 8px;
+  }
+
+  .button {
+    padding: 8px 16px;
+  }
+} */
+
+.contactPage {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactPage h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contactPage p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+.input,
+.textarea {
+  width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
