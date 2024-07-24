@@ -30,18 +30,15 @@
 // export default ContactPage;
 
 import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import styles from "../styles/ContactPage.module.css";
 
 const ContactPage = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [state, handleSubmit] = useForm("xzzpdkyl");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const mailtoLink = `mailto:kozachenkooleksandr@gmail.com?subject=Contact Form Submission&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-    window.location.href = mailtoLink;
-  };
+  if (state.succeeded) {
+    return <p>Дякуємо за ваше повідомлення!</p>;
+  }
 
   return (
     <div className={styles.contactPage}>
@@ -59,8 +56,6 @@ const ContactPage = () => {
           type="text"
           id="name"
           name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
           required
           autoComplete="name"
         />
@@ -72,11 +67,10 @@ const ContactPage = () => {
           type="email"
           id="email"
           name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
           required
           autoComplete="email"
         />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
         <label className={styles.label} htmlFor="message">
           Повідомлення
         </label>
@@ -84,15 +78,25 @@ const ContactPage = () => {
           className={styles.textarea}
           id="message"
           name="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
           required
           autoComplete="message"
         ></textarea>
-        <button className={styles.button} type="submit">
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
+        <button
+          className={styles.button}
+          type="submit"
+          disabled={state.submitting}
+        >
           Надіслати
         </button>
       </form>
+      {state.succeeded && (
+        <p className={styles.success}>Лист успішно надіслано!</p>
+      )}
     </div>
   );
 };
