@@ -9,7 +9,7 @@ const ContactPage = () => {
         правові питання.
       </p>
       <form className={styles.contactForm}>
-        <label className={styles.label}>Ім'я</label>
+        <label className={styles.label}>name</label>
         <input className={styles.input} type="text" name="name" required />
         <label className={styles.label}>Електронна пошта</label>
         <input className={styles.input} type="email" name="email" required />

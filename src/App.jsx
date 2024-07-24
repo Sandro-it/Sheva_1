@@ -27,6 +27,7 @@
 
 // export default App;
 
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -39,8 +40,8 @@ import ErrorMessage from "./components/errorMessage/ErrorMessage";
 import styles from "./App.module.css";
 
 function App() {
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
+  const [loading] = React.useState(false);
+  const [error] = React.useState(null);
 
   if (loading) {
     return <Loader />;

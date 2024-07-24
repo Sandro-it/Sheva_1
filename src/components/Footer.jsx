@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p className={styles.footerText}>
-        &copy; 2024 Ім'я Композитора. Всі права захищені.
+        &copy; 2024 Yuri Shevchenko. Всі права захищені.
       </p>
       <div className={styles.socialLinks}>
         <a className={styles.socialLink} href="mailto:example@example.com">
