@@ -36,7 +36,7 @@ import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
 import Loader from "./components/loader/Loader";
 import ErrorMessage from "./components/errorMessage/ErrorMessage";
-import styles from "./styles/App.module.css";
+import styles from "./App.module.css";
 
 function App() {
   const [loading, setLoading] = React.useState(false);

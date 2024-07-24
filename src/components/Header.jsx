@@ -11,16 +11,19 @@ const Header = () => {
               Головна
             </Link>
           </li>
+
           <li className={styles.navItem}>
             <Link className={styles.navLink} to="/biography">
               Біографія
             </Link>
           </li>
+
           <li className={styles.navItem}>
             <Link className={styles.navLink} to="/works">
               Твори
             </Link>
           </li>
+
           <li className={styles.navItem}>
             <Link className={styles.navLink} to="/contact">
               Контакти
