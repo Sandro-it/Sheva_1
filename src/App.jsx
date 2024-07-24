@@ -53,14 +53,14 @@ function App() {
   return (
     <div className={styles.App}>
       <Header />
-      <Router>
-        <Routes>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/biography" component={BiographyPage} />
-          <Route path="/works" component={WorksPage} />
-          <Route path="/contact" component={ContactPage} />
-        </Routes>
-      </Router>
+
+      <Routes>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/biography" component={BiographyPage} />
+        <Route path="/works" component={WorksPage} />
+        <Route path="/contact" component={ContactPage} />
+      </Routes>
+
       <Footer />
     </div>
   );
