@@ -1,22 +1,30 @@
-import "../styles/ContactPage.module.css";
+import styles from "../../styles/ContactPage.module.css";
 
-function ContactPage() {
+const ContactPage = () => {
   return (
-    <div className="contact-page">
+    <div className={styles.contactPage}>
       <h1>Контакти</h1>
-      <p>Процедура отримання ліцензій...</p>
-      <p>Контактна інформація для правових питань...</p>
-      <form className="contact-form">
-        <label>Name</label>
-        <input type="text" name="name" required />
-        <label>Електронна пошта</label>
-        <input type="email" name="email" required />
-        <label>Повідомлення</label>
-        <textarea name="message" required></textarea>
-        <button type="submit">Надіслати</button>
+      <p className={styles.text}>
+        Тут ви можете знайти інформацію про процедуру отримання ліцензій та інші
+        правові питання.
+      </p>
+      <form className={styles.contactForm}>
+        <label className={styles.label}>Ім'я</label>
+        <input className={styles.input} type="text" name="name" required />
+        <label className={styles.label}>Електронна пошта</label>
+        <input className={styles.input} type="email" name="email" required />
+        <label className={styles.label}>Повідомлення</label>
+        <textarea
+          className={styles.textarea}
+          name="message"
+          required
+        ></textarea>
+        <button className={styles.button} type="submit">
+          Надіслати
+        </button>
       </form>
     </div>
   );
-}
+};
 
 export default ContactPage;

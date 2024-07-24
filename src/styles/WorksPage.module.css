@@ -3,23 +3,19 @@
   text-align: left;
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .text {
   margin-bottom: 15px;
   line-height: 1.6;
+  color: #333;
 }
 
 @media (min-width: 768px) {
   .worksPage {
     padding: 40px;
-  }
-
-  .title {
-    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .text {

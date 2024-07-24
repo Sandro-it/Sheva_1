@@ -1,27 +1,35 @@
 import { Link } from "react-router-dom";
-import "../styles/Header.module.css";
+import styles from "../styles/Header.module.css";
 
-function Header() {
+const Header = () => {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <nav>
-        <ul className="nav-links">
-          <li>
-            <Link to="/">Головна</Link>
+        <ul className={styles.navLinks}>
+          <li className={styles.navItem}>
+            <Link className={styles.navLink} to="/">
+              Головна
+            </Link>
           </li>
-          <li>
-            <Link to="/biography">Біографія</Link>
+          <li className={styles.navItem}>
+            <Link className={styles.navLink} to="/biography">
+              Біографія
+            </Link>
           </li>
-          <li>
-            <Link to="/works">Твори</Link>
+          <li className={styles.navItem}>
+            <Link className={styles.navLink} to="/works">
+              Твори
+            </Link>
           </li>
-          <li>
-            <Link to="/contact">Контакти</Link>
+          <li className={styles.navItem}>
+            <Link className={styles.navLink} to="/contact">
+              Контакти
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

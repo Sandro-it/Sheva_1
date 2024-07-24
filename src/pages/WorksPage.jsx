@@ -1,14 +1,19 @@
-import "../styles/WorksPage.module.css";
+import styles from "../../styles/WorksPage.module.css";
 
-function WorksPage() {
+const WorksPage = () => {
   return (
-    <div className="works-page">
+    <div className={styles.worksPage}>
       <h1>Твори</h1>
-      <p>Каталог творів...</p>
-      <p>Завантаження нот та партитур...</p>
-      <p>Можливість прослуховування аудіозаписів...</p>
+      <p className={styles.text}>
+        Перелік основних музичних творів композитора з можливістю завантаження
+        нот та прослуховування аудіозаписів.
+      </p>
+      <p className={styles.text}>
+        Кожен твір супроводжується коротким описом, історією створення та
+        значенням для музичної спадщини.
+      </p>
     </div>
   );
-}
+};
 
 export default WorksPage;

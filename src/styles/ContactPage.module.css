@@ -3,44 +3,35 @@
   text-align: left;
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .text {
   margin-bottom: 15px;
   line-height: 1.6;
+  color: #333;
 }
 
 .contactForm {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .label {
   margin-bottom: 5px;
-  font-weight: bold;
 }
 
 .input,
 .textarea {
-  margin-bottom: 15px;
   padding: 10px;
-  font-size: 16px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px;
   background-color: #333;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -49,36 +40,8 @@
 }
 
 @media (min-width: 768px) {
-  .contactPage {
-    padding: 40px;
-  }
-
-  .title {
-    font-size: 2em;
-  }
-
-  .text {
-    font-size: 1.2em;
-  }
-
   .contactForm {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .label,
-  .input,
-  .textarea {
-    width: 48%;
-  }
-
-  .textarea {
-    height: 100px;
-  }
-
-  .button {
-    width: 100%;
-    margin-top: 20px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
