@@ -20,7 +20,7 @@ const Header = () => {
 
           <li className={styles.navItem}>
             <Link className={styles.navLink} to="/works">
-              Твори
+              Спадщина
             </Link>
           </li>
 
