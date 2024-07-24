@@ -51,29 +51,38 @@ const ContactPage = () => {
         правові питання.
       </p>
       <form className={styles.contactForm} onSubmit={handleSubmit}>
-        <label className={styles.label}>Ім'я</label>
+        <label className={styles.label} htmlFor="name">
+          Ім'я
+        </label>
         <input
           className={styles.input}
           type="text"
+          id="name"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
           autoComplete="name"
         />
-        <label className={styles.label}>Електронна пошта</label>
+        <label className={styles.label} htmlFor="email">
+          Електронна пошта
+        </label>
         <input
           className={styles.input}
           type="email"
+          id="email"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
           autoComplete="email"
         />
-        <label className={styles.label}>Повідомлення</label>
+        <label className={styles.label} htmlFor="message">
+          Повідомлення
+        </label>
         <textarea
           className={styles.textarea}
+          id="message"
           name="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
