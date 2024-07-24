@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from "../styles/ContactPage.module.css";
 
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("xzzpdkyl");
   const [submitted, setSubmitted] = useState(false);
   const location = useLocation();
-  const history = useHistory();
 
   useEffect(() => {
     if (state.succeeded) {
@@ -18,17 +17,6 @@ const ContactPage = () => {
   useEffect(() => {
     setSubmitted(false);
   }, [location.pathname]);
-
-  useEffect(() => {
-    const unlisten = history.listen(() => {
-      if (location.pathname === "/contact") {
-        setSubmitted(false);
-      }
-    });
-    return () => {
-      unlisten();
-    };
-  }, [location.pathname, history]);
 
   return (
     <div className={styles.contactPage}>
