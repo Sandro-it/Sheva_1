@@ -55,10 +55,10 @@ function App() {
       <Header />
 
       <Routes>
-        <Route exact path="/" component={<HomePage />} />
-        <Route path="/biography" component={<BiographyPage />} />
-        <Route path="/works" component={<WorksPage />} />
-        <Route path="/contact" component={<ContactPage />} />
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/biography" element={<BiographyPage />} />
+        <Route path="/works" element={<WorksPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
 
       <Footer />
