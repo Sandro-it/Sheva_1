@@ -8,9 +8,9 @@ const Footer = () => {
         &copy; 2024 Yuri Shevchenko. Всі права захищені.
       </p>
       <div className={styles.socialLinks}>
-        <a className={styles.socialLink} href="kozachenkooleksandr@gmail.com">
+        <Link className={styles.socialLink} to="/contact">
           Електронна пошта
-        </a>
+        </Link>
         <a className={styles.socialLink} href="tel:+380671967232">
           Телефон
         </a>
