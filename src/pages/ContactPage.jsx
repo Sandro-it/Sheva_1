@@ -88,11 +88,6 @@ import styles from "../styles/ContactPage.module.css";
 
 // export default ContactPage;
 
-import React, { useState, useEffect } from "react";
-import { useForm, ValidationError } from "@formspree/react";
-import { useLocation } from "react-router-dom";
-import styles from "../styles/ContactPage.module.css";
-
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("xzzpdkyl");
   const [submitted, setSubmitted] = useState(false);
