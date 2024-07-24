@@ -5,7 +5,11 @@ const HomePage = () => {
     <div className={styles.homePage}>
       <h1>Yuri Shevchenko</h1>
       <p className={styles.description}>Коротка біографія композитора...</p>
-      <img className={styles.photo} src="/path/to/photo.jpg" alt="Композитор" />
+      <img
+        className={styles.photo}
+        src="/public/images/Sheva1.jpg"
+        alt="Композитор"
+      />
     </div>
   );
 };
