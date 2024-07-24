@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { useLocation } from "react-router-dom";
 import styles from "../styles/ContactPage.module.css";
 
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("xzzpdkyl");
   const [submitted, setSubmitted] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     if (state.succeeded) {
@@ -14,7 +16,7 @@ const ContactPage = () => {
 
   useEffect(() => {
     setSubmitted(false);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className={styles.contactPage}>
