@@ -16,7 +16,7 @@ const ContactPage = () => {
 
   useEffect(() => {
     setSubmitted(false);
-  }, [location.pathname]);
+  }, [location.key]);
 
   return (
     <div className={styles.contactPage}>
