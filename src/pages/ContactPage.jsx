@@ -1,26 +1,23 @@
 import { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "../styles/ContactPage.module.css";
 
 const ContactPage = () => {
   const [state, handleSubmit] = useForm("xzzpdkyl");
-  const [submitted, setSubmitted] = useState(false);
-  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (state.succeeded) {
-      setSubmitted(true);
+      setTimeout(() => {
+        navigate("/contact", { replace: true });
+      }, 2000);
     }
-  }, [state.succeeded]);
-
-  useEffect(() => {
-    setSubmitted(false);
-  }, [location.pathname]);
+  }, [state.succeeded, navigate]);
 
   return (
     <div className={styles.contactPage}>
-      {submitted ? (
+      {state.succeeded ? (
         <p>Дякуємо за ваше повідомлення!</p>
       ) : (
         <>
