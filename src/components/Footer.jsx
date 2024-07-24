@@ -7,10 +7,10 @@ const Footer = () => {
         &copy; 2024 Yuri Shevchenko. Всі права захищені.
       </p>
       <div className={styles.socialLinks}>
-        <a className={styles.socialLink} href="mailto:example@example.com">
+        <a className={styles.socialLink} href="kozachenkooleksandr@gmail.com">
           Електронна пошта
         </a>
-        <a className={styles.socialLink} href="tel:+123456789">
+        <a className={styles.socialLink} href="tel:+380671967232">
           Телефон
         </a>
         <a className={styles.socialLink} href="https://facebook.com">
