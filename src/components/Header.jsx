@@ -72,7 +72,7 @@ const Header = () => {
             </li>
             <li className={styles.navItem} onClick={closeMenu}>
               <Link className={styles.navLink} to="/works">
-                Твори
+                Спадщина
               </Link>
             </li>
             <li className={styles.navItem} onClick={closeMenu}>
