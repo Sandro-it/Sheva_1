@@ -62,8 +62,10 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
+  const closeMenu = (e) => {
+    if (e.target === e.currentTarget) {
+      setMenuOpen(false);
+    }
   };
 
   return (
@@ -74,7 +76,7 @@ const Header = () => {
         </button>
         {menuOpen && (
           <div className={styles.navOverlay} onClick={closeMenu}>
-            <nav className={styles.nav} onClick={(e) => e.stopPropagation()}>
+            <nav className={styles.nav}>
               <ul className={styles.navLinks}>
                 <li className={styles.navItem} onClick={closeMenu}>
                   <Link className={styles.navLink} to="/">
@@ -88,7 +90,7 @@ const Header = () => {
                 </li>
                 <li className={styles.navItem} onClick={closeMenu}>
                   <Link className={styles.navLink} to="/works">
-                    Спадщина
+                    Твори
                   </Link>
                 </li>
                 <li className={styles.navItem} onClick={closeMenu}>
