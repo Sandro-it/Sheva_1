@@ -1,4 +1,4 @@
-.homePage {
+/* .homePage {
   padding: 20px;
   text-align: center;
 }
@@ -32,5 +32,52 @@
     width: 45%;
     font-size: 1.2em;
     text-align: left;
+  }
+} */
+
+.homePage {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80vh; /* Ensure the content is higher up on the page */
+}
+
+.homePage h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.homePage p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.homePage .description {
+  max-width: 500px;
+}
+
+.homePage .photo {
+  max-width: 400px;
+  max-height: 100%;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .homePage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homePage .photo {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
   }
 }
