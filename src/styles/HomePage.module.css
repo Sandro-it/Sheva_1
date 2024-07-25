@@ -62,7 +62,7 @@
 }
 
 .homePage .photo {
-  max-width: 400px;
+  max-width: 100%;
   max-height: 100%;
   object-fit: cover;
   margin-left: 20px;
