@@ -116,7 +116,7 @@ const ContactPage = () => {
           </p>
           <form className={styles.contactForm} onSubmit={handleSubmit}>
             <label className={styles.label} htmlFor="name">
-              Ім'я
+              Ваше ім'я
             </label>
             <input
               className={styles.input}
