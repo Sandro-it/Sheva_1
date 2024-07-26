@@ -18,6 +18,8 @@
 
 // export default LegacyPage;
 
+import styles from "../styles/LegacyPage.module.css";
+
 const LegacyPage = () => {
   return (
     <div className={styles.legacyPage}>
