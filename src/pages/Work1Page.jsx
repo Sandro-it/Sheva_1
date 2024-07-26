@@ -15,7 +15,7 @@ const Work1Page = () => {
       />
       <p>
         <a
-          href="https://www.youtube.com/watch?v=example"
+          href="https://youtu.be/GEu86XXO6Dw"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
