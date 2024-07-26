@@ -32,7 +32,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.navItem} onClick={closeMenu}>
-              <Link className={styles.navLink} to="/works">
+              <Link className={styles.navLink} to="/legacy">
                 Спадщина
               </Link>
             </li>

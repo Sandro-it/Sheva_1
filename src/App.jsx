@@ -33,7 +33,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import BiographyPage from "./pages/BiographyPage";
-import WorksPage from "./pages/WorksPage";
+import WorksPage from "./pages/LegacyPage";
 import ContactPage from "./pages/ContactPage";
 import Loader from "./components/loader/Loader";
 import ErrorMessage from "./components/errorMessage/ErrorMessage";
@@ -57,7 +57,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/biography" element={<BiographyPage />} />
-        <Route path="/works" element={<WorksPage />} />
+        <Route path="/legacy" element={<LegacyPage />} />
+        <Route path="/works" element={<Work1Page />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
 
