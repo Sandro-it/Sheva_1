@@ -18,6 +18,7 @@
 
 // export default LegacyPage;
 
+import { Link } from "react-router-dom";
 import styles from "../styles/LegacyPage.module.css";
 
 const LegacyPage = () => {
