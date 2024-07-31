@@ -1,4 +1,4 @@
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 // import { useForm, ValidationError } from "@formspree/react";
 // import { useLocation } from "react-router-dom";
 // import styles from "../styles/ContactPage.module.css";
@@ -88,7 +88,7 @@
 
 // export default ContactPage;
 
-import { useState } from "react";
+// import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "../styles/ContactPage.module.css";
 
@@ -122,7 +122,12 @@ const ContactPage = () => {
     } else {
       // Логіка для надсилання листа через EmailJS
       emailjs
-        .sendForm("d201y59", "8ep8akz", e.target, "n0r__iuFChqjNYKvx")
+        .sendForm(
+          "service_d201y59",
+          "template_8ep8akz",
+          e.target,
+          "n0r__iuFChqjNYKvx"
+        )
         .then(
           (result) => {
             console.log(result.text);
@@ -162,7 +167,7 @@ const ContactPage = () => {
             <input
               type="text"
               id="name"
-              name="name"
+              name="from_name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Введіть своє ім'я та прізвище"
@@ -175,7 +180,7 @@ const ContactPage = () => {
             <input
               type="email"
               id="email"
-              name="email"
+              name="from_email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Введіть свою електронну пошту"
