@@ -1,42 +1,35 @@
-// import styles from "../styles/LegacyPage.module.css";
-
-// const LegacyPage = () => {
-//   return (
-//     <div className={styles.LegacyPage}>
-//       <h1>Твори</h1>
-//       <p className={styles.text}>
-//         Перелік основних музичних творів композитора з можливістю завантаження
-//         нот та прослуховування аудіозаписів.
-//       </p>
-//       <p className={styles.text}>
-//         Кожен твір супроводжується коротким описом, історією створення та
-//         значенням для музичної спадщини.
-//       </p>
-//     </div>
-//   );
-// };
-
-// export default LegacyPage;
-
 import { Link } from "react-router-dom";
 import styles from "../styles/LegacyPage.module.css";
+import worksData from "../data/worksData";
 
 const LegacyPage = () => {
+  const groupedWorks = worksData.reduce((acc, work) => {
+    if (!acc[work.category]) {
+      acc[work.category] = [];
+    }
+    acc[work.category].push(work);
+    return acc;
+  }, {});
+
   return (
-    <div className={styles.legacyPage}>
-      <h1>Твори</h1>
-      <p className={styles.text}>
-        Перелік основних музичних творів композитора з можливістю завантаження
-        нот та прослуховування аудіозаписів.
-      </p>
-      <ul className={styles.worksList}>
-        <li>
-          <Link to="/works/work1" className={styles.workLink}>
-            Твір #1
-          </Link>
-        </li>
-        {/* Додайте інші твори тут */}
-      </ul>
+    <div className="container">
+      <div className={styles.legacyPage}>
+        <h1>Творча спадщина у категоріях</h1>
+        {Object.keys(groupedWorks).map((category) => (
+          <div key={category}>
+            <h2>{category}</h2>
+            <ul className={styles.worksList}>
+              {groupedWorks[category].map((work) => (
+                <li key={work.id}>
+                  <Link to={`/works/${work.id}`} className={styles.workLink}>
+                    {work.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

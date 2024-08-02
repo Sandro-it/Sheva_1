@@ -1,6 +1,45 @@
 .workPage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 20px;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topSection {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.textSection {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.imageSection {
+  flex: 0 1 400px;
+}
+
+.backButton {
+  padding: 10px 20px;
+  background-color: #132946;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  align-self: flex-start;
+}
+
+.backButton:hover {
+  background-color: #0f2138;
 }
 
 .workPage h1 {
@@ -15,13 +54,33 @@
 }
 
 .workPage .photo {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin-bottom: 20px;
+  object-fit: cover;
 }
 
 .workPage .link {
   font-size: 18px;
   color: blue;
   text-decoration: underline;
+}
+
+.workPage .link:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contentSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textSection {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .imageSection {
+    width: 100%;
+  }
 }

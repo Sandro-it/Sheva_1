@@ -1,51 +1,38 @@
-/* .worksPage {
-  padding: 20px;
-  text-align: left;
-}
-
-.text {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #333;
-}
-
-@media (min-width: 768px) {
-  .worksPage {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .text {
-    font-size: 1.2em;
-  }
-} */
-
 .legacyPage {
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .legacyPage h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .legacyPage p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .worksList {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 
 .workLink {
   font-size: 18px;
-  color: blue;
-  text-decoration: underline;
+  color: #132946;
+  text-decoration: none;
+  /* display: block;
+  margin-bottom: 10px;
+  text-align: left; */
+}
+
+.legacyPage .workLink:hover {
+  font-size: 18px;
+  font-weight: 500;
+  color: #244e86;
 }

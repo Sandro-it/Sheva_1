@@ -15,34 +15,36 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.navContainer}>
-        <button className={styles.menuButton} onClick={toggleMenu}>
-          ☰
-        </button>
-        <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
-          <ul className={styles.navLinks}>
-            <li className={styles.navItem} onClick={closeMenu}>
-              <Link className={styles.navLink} to="/">
-                Головна
-              </Link>
-            </li>
-            <li className={styles.navItem} onClick={closeMenu}>
-              <Link className={styles.navLink} to="/biography">
-                Біографія
-              </Link>
-            </li>
-            <li className={styles.navItem} onClick={closeMenu}>
-              <Link className={styles.navLink} to="/legacy">
-                Спадщина
-              </Link>
-            </li>
-            <li className={styles.navItem} onClick={closeMenu}>
-              <Link className={styles.navLink} to="/contact">
-                Контакти
-              </Link>
-            </li>
-          </ul>
-        </nav>
+      <div className="container">
+        <div className={styles.navContainer}>
+          <button className={styles.menuButton} onClick={toggleMenu}>
+            ☰
+          </button>
+          <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
+            <ul className={styles.navLinks}>
+              <li className={styles.navItem} onClick={closeMenu}>
+                <Link className={styles.navLink} to="/">
+                  ГОЛОВНА
+                </Link>
+              </li>
+              <li className={styles.navItem} onClick={closeMenu}>
+                <Link className={styles.navLink} to="/biography">
+                  БІОГРАФІЯ
+                </Link>
+              </li>
+              <li className={styles.navItem} onClick={closeMenu}>
+                <Link className={styles.navLink} to="/legacy">
+                  СПАДЩИНА
+                </Link>
+              </li>
+              <li className={styles.navItem} onClick={closeMenu}>
+                <Link className={styles.navLink} to="/contact">
+                  КОНТАКТИ
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       {menuOpen && <div className={styles.overlay} onClick={closeMenu}></div>}
     </header>

@@ -1,7 +1,15 @@
+import { useParams, Link } from "react-router-dom";
 import styles from "../styles/WorkPage.module.css";
-import { Link } from "react-router-dom";
+import worksData from "../data/worksData";
 
-const Work1Page = () => {
+const WorkPage = () => {
+  const { workId } = useParams();
+  const work = worksData.find((work) => work.id === workId);
+
+  if (!work) {
+    return <div>Твір не знайдено</div>;
+  }
+
   return (
     <div className="container">
       <div className={styles.workPage}>
@@ -12,17 +20,13 @@ const Work1Page = () => {
         </div>
         <div className={styles.contentSection}>
           <div className={styles.textSection}>
-            <h1>Твір #1</h1>
-            <p className={styles.description}>
-              Це приклад опису твору #1. Опис може включати інформацію про
-              історію створення, значення для культурної спадщини та деталі
-              виконання.
-            </p>
+            <h1>{work.title}</h1>
+            <p className={styles.description}>{work.description}</p>
             <p>
               Посилання на виконання твору:
               <a
                 className={styles.link}
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                href={work.videoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -33,8 +37,8 @@ const Work1Page = () => {
           <div className={styles.imageSection}>
             <img
               className={styles.photo}
-              src="/images/Бармалей.jpg"
-              alt="Твір #1"
+              src={work.imageUrl}
+              alt={work.title}
             />
           </div>
         </div>
@@ -43,4 +47,4 @@ const Work1Page = () => {
   );
 };
 
-export default Work1Page;
+export default WorkPage;
