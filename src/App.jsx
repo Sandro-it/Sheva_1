@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import BiographyPage from "./pages/BiographyPage";
 import LegacyPage from "./pages/LegacyPage";
 import WorkPage from "./pages/WorkPage";
-import worksData from "./data/worksData";
+// import worksData from "./data/worksData";
 import ContactPage from "./pages/ContactPage";
 import Loader from "./components/loader/Loader";
 import ErrorMessage from "./components/errorMessage/ErrorMessage";
@@ -31,13 +31,14 @@ function App() {
           <Route exact path="/" element={<HomePage />} />
           <Route path="/biography" element={<BiographyPage />} />
           <Route path="/legacy" element={<LegacyPage />} />
-          {worksData.map((work) => (
+          <Route path="/works/:workId" element={<WorkPage />} />
+          {/* {worksData.map((work) => (
             <Route
               key={work.id}
               path={`/works/:workId`}
               element={<WorkPage work={work} />}
             />
-          ))}
+          ))} */}
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
