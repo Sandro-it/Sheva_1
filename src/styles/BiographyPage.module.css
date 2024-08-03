@@ -4,9 +4,12 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 20px;
-  /* max-width: 1200px; */
+  max-width: 1200px;
   margin: 0 auto;
-  /* font-family: Arial, sans-serif; */
+  min-height: calc(
+    100vh - 100px
+  ); /* Забезпечує, що контент займає весь екран */
+  box-sizing: border-box; /* Включає падінги в розміри */
 }
 
 .textSection {
@@ -16,6 +19,9 @@
 
 .imageSection {
   flex: 0 1 400px;
+  display: flex;
+  justify-content: center; /* Вирівнює зображення по центру */
+  align-items: center; /* Вирівнює зображення по вертикалі */
 }
 
 .biographyPage h1 {
@@ -28,7 +34,6 @@
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 10px;
-  /* color: #333; */
 }
 
 .biographyPage p {
@@ -49,6 +54,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  margin-bottom: 0; /* Забирає зайві відступи */
 }
 
 /* Responsive styles for mobile devices */
@@ -56,6 +62,8 @@
   .biographyPage {
     flex-direction: column;
     align-items: center;
+    min-height: auto;
+    padding-bottom: 0;
   }
 
   .textSection {
@@ -65,5 +73,22 @@
 
   .imageSection {
     width: 100%;
+    align-items: last baseline;
+  }
+
+  .biographyPage .photo {
+    margin-bottom: 0; /* Remove margin-bottom on smaller screens */
+  }
+
+  .biographyPage h1 {
+    font-size: 28px;
+  }
+
+  .biographyPage h2 {
+    font-size: 20px;
+  }
+
+  .biographyPage p {
+    font-size: 14px;
   }
 }

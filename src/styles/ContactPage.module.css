@@ -2,13 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 .leftColumn,
 .rightColumn {
   flex: 1;
-  min-width: 300px;
-  padding: 20px 0 20px 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 20px 20px 0;
 }
 
 .leftColumn {
@@ -42,6 +44,11 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: "Exo 2", sans-serif;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
 }
 
 inputError {
@@ -72,13 +79,22 @@ button:disabled {
   .contactPage {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+  }
+
+  .leftColumn {
+    border-right: none;
+    margin-bottom: 20px;
+    padding-right: 0;
+    text-align: left;
   }
 
   .rightColumn {
-    /* padding-left: 20px; */
-  }
-
-  .imageSection {
-    width: 100%;
+    padding-left: 0;
   }
 }

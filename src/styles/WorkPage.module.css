@@ -36,6 +36,7 @@
   text-decoration: none;
   border-radius: 5px;
   align-self: flex-start;
+  font-size: 14px; /* Використовуємо базовий розмір шрифту для кнопки */
 }
 
 .backButton:hover {
@@ -43,14 +44,16 @@
 }
 
 .workPage h1 {
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 20px;
+  /* text-align: left; */
 }
 
 .workPage .description {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
+  /* text-align: left; */
 }
 
 .workPage .photo {
@@ -60,13 +63,16 @@
 }
 
 .workPage .link {
-  font-size: 18px;
-  color: blue;
-  text-decoration: underline;
+  font-weight: 400;
+  font-size: 16px;
+  color: #132946;
+  text-decoration: none;
 }
 
 .workPage .link:hover {
   text-decoration: none;
+  font-weight: 500;
+  color: #244e86;
 }
 
 @media (max-width: 768px) {
@@ -82,5 +88,22 @@
 
   .imageSection {
     width: 100%;
+  }
+
+  .backButton {
+    font-size: 12px; /* Зменшуємо шрифт на мобільних пристроях */
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 14px !important;
   }
 }

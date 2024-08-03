@@ -133,7 +133,7 @@ const worksData = [
     year: "рік???",
     description: "Опис твору...",
     imageUrl: "/images/Запорожець_сцена.jpg",
-    videoUrl: "",
+    videoUrl: "https://youtu.be/HsKI5R3Ip3c",
   },
   {
     id: "work16",

@@ -3,36 +3,31 @@
   text-align: left;
 }
 
-.legacyPage h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.legacyPage p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
 .worksList {
   list-style: none;
   padding: 0;
-  text-align: left;
 }
 
 .workLink {
-  font-size: 18px;
+  font-size: 16px;
   color: #132946;
   text-decoration: none;
-  /* display: block;
+  display: inline;
   margin-bottom: 10px;
-  text-align: left; */
 }
 
 .legacyPage .workLink:hover {
-  font-size: 18px;
   font-weight: 500;
   color: #244e86;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+  .legacyPage {
+    padding: 10px;
+  }
+
+  .worksList {
+    padding-left: 15px; /* Забезпечення відступу для мобільних пристроїв */
+  }
 }

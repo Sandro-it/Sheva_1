@@ -15,7 +15,7 @@ const WorkPage = () => {
       <div className={styles.workPage}>
         <div className={styles.topSection}>
           <Link to="/legacy" className={styles.backButton}>
-            Повернутися до списку творів
+            до списку творів
           </Link>
         </div>
         <div className={styles.contentSection}>
@@ -23,7 +23,7 @@ const WorkPage = () => {
             <h1>{work.title}</h1>
             <p className={styles.description}>{work.description}</p>
             <p>
-              Посилання на виконання твору:
+              {/* Посилання на виконання твору: */}
               <a
                 className={styles.link}
                 href={work.videoUrl}
