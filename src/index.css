@@ -12,6 +12,8 @@ body {
   color: #333;
   overflow-x: hidden;
   overflow-y: scroll;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 code {
@@ -45,7 +47,8 @@ h1 {
   margin-bottom: 20px;
   text-align: left;
   font-family: "Exo 2", sans-serif;
-  color: #132946;
+  /* color: #132946; */
+  color: var(--heading-color);
 }
 
 h2 {
@@ -53,15 +56,17 @@ h2 {
   margin-top: 20px;
   margin-bottom: 10px;
   font-family: "Exo 2", sans-serif;
-  color: #132946;
+  /* color: #132946; */
+  color: var(--heading-color);
 }
 
 p {
   font-size: 16px;
   line-height: 1.6;
-  color: #555;
+  /* color: #555; */
   margin-bottom: 15px;
   font-family: "Exo 2", sans-serif;
+  color: var(--paragraph-color);
 }
 
 /* Базові стилі для мобільних пристроїв */
@@ -77,4 +82,21 @@ p {
   p {
     font-size: 14px;
   }
+}
+
+:root {
+  --background-color: #ffffff;
+  /* --text-color: #000000; */
+  /* інші кольори для світлої теми */
+  --text-color: #333333;
+  --heading-color: #132946;
+  --paragraph-color: #555555;
+}
+
+[data-theme="dark"] {
+  --background-color: #132946;
+  --text-color: #ffffff;
+  --heading-color: #928c8c;
+  --paragraph-color: #e0e0e0;
+  /* інші кольори для темної теми */
 }

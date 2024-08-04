@@ -104,7 +104,7 @@ const WorkPage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Переглянути на YouTube
+                  {t("view_on_youtube")} {/* Використовуємо переклад */}
                 </a>
               </p>
             </div>

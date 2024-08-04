@@ -68,6 +68,13 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #244e86; /* Змінює фон на ваш колір при наведенні та фокусі */
+  color: #ffffff; /* Колір тексту залишається білим */
 }
 
 button:disabled {
@@ -97,4 +104,57 @@ button:disabled {
   .rightColumn {
     padding-left: 0;
   }
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background-color: #333; /* Темний фон для інпутів */
+  color: #fff; /* Білий колір тексту */
+  border: 1px solid #555; /* Темний колір обведення */
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] input:hover,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] textarea:hover {
+  border-color: #777; /* Світліша обведення під час фокусу */
+}
+
+[data-theme="dark"] label {
+  color: #ccc; /* Світлий колір тексту лейблів */
+}
+
+[data-theme="dark"] .inputError {
+  border-color: #ff6b6b; /* Червоне обведення для інпутів з помилками */
+}
+
+[data-theme="dark"] .errorText {
+  color: #ff6b6b; /* Червоний колір для тексту помилок */
+}
+
+[data-theme="dark"] input:-webkit-autofill,
+[data-theme="dark"] input:-webkit-autofill:hover,
+[data-theme="dark"] input:-webkit-autofill:focus,
+[data-theme="dark"] textarea:-webkit-autofill,
+[data-theme="dark"] textarea:-webkit-autofill:hover,
+[data-theme="dark"] textarea:-webkit-autofill:focus {
+  background-color: #333 !important;
+  color: #fff !important;
+  border: 1px solid #555 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset !important;
+  box-shadow: 0 0 0px 1000px #333 inset !important;
+  -webkit-text-fill-color: #fff !important; /* Змінює колір тексту в автозаповнених полях */
+}
+
+[data-theme="dark"] ::placeholder {
+  color: #ccc; /* Світлий колір підказок для темної теми */
+  opacity: 1; /* Забезпечує, що підказка має встановлений колір */
+}
+
+[data-theme="dark"] :-ms-input-placeholder {
+  color: #ccc; /* Для підтримки в Internet Explorer 10-11 */
+}
+
+[data-theme="dark"] ::-ms-input-placeholder {
+  color: #ccc; /* Для підтримки в Microsoft Edge */
 }

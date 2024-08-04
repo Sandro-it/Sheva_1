@@ -9,6 +9,7 @@
   border: none;
   padding: 8px 16px;
   cursor: pointer;
+  font-family: "Exo 2", sans-serif;
   font-size: 16px;
   border-radius: 4px;
 }
@@ -37,4 +38,10 @@
 
 .languageList li:hover {
   background-color: #244e86;
+}
+
+@media (max-width: 768px) {
+  .languageButton {
+    font-size: 14px; /* Зменшення шрифту для мобільних пристроїв */
+  }
 }

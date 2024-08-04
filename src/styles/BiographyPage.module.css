@@ -13,15 +13,16 @@
 }
 
 .textSection {
-  flex: 1;
+  flex: 0 1 55%; /* Зменшуємо ширину текстового блоку */
   margin-right: 20px;
 }
 
 .imageSection {
-  flex: 0 1 400px;
+  flex: 0 1 45%; /* Збільшуємо ширину блоку з фото */
   display: flex;
   justify-content: center; /* Вирівнює зображення по центру */
   align-items: center; /* Вирівнює зображення по вертикалі */
+  margin-top: 30px;
 }
 
 .biographyPage h1 {
@@ -69,6 +70,7 @@
   .textSection {
     margin-right: 0;
     margin-bottom: 20px;
+    width: 100%; /* Робимо текстовий блок ширшим на мобільних пристроях */
   }
 
   .imageSection {
@@ -91,4 +93,17 @@
   .biographyPage p {
     font-size: 14px;
   }
+}
+
+[data-theme="dark"] .biographyPage p {
+  color: #e0e0e0; /* Світліший колір для темної теми */
+}
+
+[data-theme="dark"] .biographyPage .importantDates {
+  color: #999; /* Змінює колір дати для темної теми */
+}
+
+[data-theme="dark"] .biographyPage h1,
+[data-theme="dark"] .biographyPage h2 {
+  color: #928c8c; /* Змінює колір заголовків для темної теми */
 }

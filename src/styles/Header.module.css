@@ -134,3 +134,16 @@
     display: none;
   }
 }
+
+.switchersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Вирівнювання по правій стороні */
+  gap: 10px; /* Відстань між кнопками */
+}
+
+/* @media (max-width: 768px) {
+  .switchersContainer {
+    gap: 5px; /* Зменшення відстані між кнопками для мобільних пристроїв */
+/*}
+} */

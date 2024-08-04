@@ -49,5 +49,8 @@
   "footer_contact": "Email",
   "footer_phone": "Phone",
   "footer_facebook": "Facebook",
-  "footer_twitter": "Twitter"
+  "footer_twitter": "Twitter",
+  "view_on_youtube": "View on YouTube",
+  "theme_light": "☀️ Light Mode",
+  "theme_dark": "🌙 Dark Mode"
 }
