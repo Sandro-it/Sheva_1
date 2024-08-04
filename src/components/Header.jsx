@@ -1,59 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 import styles from "../styles/Header.module.css";
 
-// const Header = () => {
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   const toggleMenu = () => {
-//     setMenuOpen(!menuOpen);
-//   };
-
-//   const closeMenu = () => {
-//     setMenuOpen(false);
-//   };
-
-//   return (
-//     <header className={styles.header}>
-//       <div className="container">
-//         <div className={styles.navContainer}>
-//           <button className={styles.menuButton} onClick={toggleMenu}>
-//             ☰
-//           </button>
-//           <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
-//             <ul className={styles.navLinks}>
-//               <li className={styles.navItem} onClick={closeMenu}>
-//                 <Link className={styles.navLink} to="/">
-//                   ГОЛОВНА
-//                 </Link>
-//               </li>
-//               <li className={styles.navItem} onClick={closeMenu}>
-//                 <Link className={styles.navLink} to="/biography">
-//                   БІОГРАФІЯ
-//                 </Link>
-//               </li>
-//               <li className={styles.navItem} onClick={closeMenu}>
-//                 <Link className={styles.navLink} to="/legacy">
-//                   СПАДЩИНА
-//                 </Link>
-//               </li>
-//               <li className={styles.navItem} onClick={closeMenu}>
-//                 <Link className={styles.navLink} to="/contact">
-//                   КОНТАКТИ
-//                 </Link>
-//               </li>
-//             </ul>
-//           </nav>
-//         </div>
-//       </div>
-//       {menuOpen && <div className={styles.overlay} onClick={closeMenu}></div>}
-//     </header>
-//   );
-// };
-
-// export default Header;
-
 const Header = () => {
+  const { t } = useTranslation(); // Використовуємо хук для перекладу
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -87,7 +39,7 @@ const Header = () => {
             <ul className={styles.navLinks}>
               <li className={styles.navItem}>
                 <Link className={styles.navLink} to="/" onClick={closeMenu}>
-                  ГОЛОВНА
+                  {t("home")} {/* Використовуємо переклад */}
                 </Link>
               </li>
               <li className={styles.navItem}>
@@ -96,7 +48,7 @@ const Header = () => {
                   to="/biography"
                   onClick={closeMenu}
                 >
-                  БІОГРАФІЯ
+                  {t("biography")} {/* Використовуємо переклад */}
                 </Link>
               </li>
               <li className={styles.navItem}>
@@ -105,7 +57,7 @@ const Header = () => {
                   to="/legacy"
                   onClick={closeMenu}
                 >
-                  СПАДЩИНА
+                  {t("legacy")} {/* Використовуємо переклад */}
                 </Link>
               </li>
               <li className={styles.navItem}>
@@ -114,11 +66,14 @@ const Header = () => {
                   to="/contact"
                   onClick={closeMenu}
                 >
-                  КОНТАКТИ
+                  {t("contact_us")} {/* Використовуємо переклад */}
                 </Link>
               </li>
             </ul>
           </nav>
+          <div className={styles.languageSwitcherContainer}>
+            <LanguageSwitcher /> {/* Додаємо перемикач мов */}
+          </div>
         </div>
       </div>
       {menuOpen && <div className={styles.overlay} onClick={closeMenu}></div>}
