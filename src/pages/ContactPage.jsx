@@ -630,7 +630,7 @@ const ContactPage = () => {
       setErrors(validationErrors);
     } else {
       try {
-        const response = await fetch("/api/sendEmail", {
+        const response = await fetch("src/api/sendEmail", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
