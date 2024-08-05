@@ -132,7 +132,7 @@ const BiographyPage = () => {
           <div className={styles.imageSection}>
             <img
               className={styles.photo}
-              src="/images/biography.jpg"
+              src="/images/biography-min.jpg"
               alt={t("biography_photo_alt")} // Використовуємо переклад
             />
           </div>

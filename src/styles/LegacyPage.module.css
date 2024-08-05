@@ -1,5 +1,6 @@
 .legacyPage {
   padding: 20px;
+  padding-top: 40px;
   text-align: left;
 }
 
@@ -24,6 +25,7 @@
 /* Стиль для темної теми */
 [data-theme="dark"] .workLink {
   color: #e0e0e0;
+  font-weight: 300; /* Тонкий шрифт */
 }
 
 [data-theme="dark"] .legacyPage .workLink:hover {
@@ -34,6 +36,7 @@
 @media (max-width: 768px) {
   .legacyPage {
     padding: 10px;
+    padding-top: 40px;
   }
 
   .worksList {

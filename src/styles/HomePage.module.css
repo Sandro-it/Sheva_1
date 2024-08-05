@@ -1,20 +1,20 @@
-.homePage {
+/* .homePage {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   padding: 20px;
+  padding-top: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  /* height: 80vh; Ensure the content is higher up on the page */
-}
+} */
 
-.homePage h1 {
+/* .homePage h1 {
   font-size: 36px;
   margin-bottom: 60px;
-}
+} */
 
-.homePage p {
+/* .homePage p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -25,37 +25,206 @@
 }
 
 .homePage .photo {
-  max-width: 500px;
+  max-width: 550px;
   max-height: 100%;
   object-fit: cover;
-  margin-top: 30px;
-}
+  /* margin-top: 10px; */
+/*} */
+
+/* .homePage .newPhoto {
+  max-width: 150px; /* Встановіть бажаний розмір нового фото */
+/*margin-right: 20px;
+} */
 
 /* Responsive styles for mobile devices */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .homePage {
     flex-direction: column;
     align-items: center;
     /* padding-bottom: 0; Усунення додаткових відступів */
-    padding: 0 10px 0 10px;
+/*padding: 40 10px 0 10px;
     min-height: calc(100vh - 80px); /* Висота контейнера без футера */
-    box-sizing: border-box;
-  }
+/*box-sizing: border-box;
+  } */
 
-  .homePage .photo {
+/* .homePage .photo {
     margin-left: 0;
     margin-top: 20px;
     width: 100%;
     max-width: 100%; /* Відображення фото на всю ширину екрану */
-    margin-bottom: 0; /*Усунення зазору під фото на мобільних пристроях */
-    object-fit: contain; /* Забезпечує повне відображення фото */
-  }
+/*margin-bottom: 0; /*Усунення зазору під фото на мобільних пристроях */
+/*object-fit: contain; /* Забезпечує повне відображення фото */
+/*} */
 
-  .homePage h1 {
-    font-size: 28px; /* Зменшення шрифту для мобільних пристроїв */
-  }
+/* .homePage h1 {
+    font-size: 28px; 
+  } */
 
-  .homePage p {
+/* .homePage p {
     font-size: 16px; /* Зменшення шрифту для мобільних пристроїв */
+/*}
+} */
+
+/*================================================================*/
+
+.homePage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: translateY(-20%);
+  max-width: 500px;
+}
+
+.newPhoto {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+[data-theme="dark"] .newPhoto {
+  content: url("/public/images/Sheva-white-min.png");
+}
+
+.description {
+  max-width: 500px;
+}
+
+.rightSection {
+  flex: 0 1 400px;
+  max-width: 100%;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    padding-top: 40px;
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .leftSection {
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .rightSection {
+    flex: 0 1 100%;
+  }
+
+  .photo {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .newPhoto,
+  .description {
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
+
+/*========================================================*/
+
+/* .homePage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: translateY(-20%);
+  max-width: 500px;
+  height: auto;
+}
+
+.newPhoto {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+[data-theme="dark"] .newPhoto {
+  content: url("/images/Sheva_white.png");
+}
+
+.description {
+  max-width: 500px;
+}
+
+.rightSection {
+  flex: 0 1 400px;
+  max-width: 100%;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    padding-top: 40px;
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .leftSection {
+    transform: none;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .rightSection {
+    flex: 0 1 100%;
+  }
+
+  .photo {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .newPhoto,
+  .description {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+} */

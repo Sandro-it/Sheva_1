@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet-async";
-import { useTranslation } from "react-i18next";
-import styles from "../styles/HomePage.module.css";
+// import { Helmet } from "react-helmet-async";
+// import { useTranslation } from "react-i18next";
+// import styles from "../styles/HomePage.module.css";
 
 // const HomePage = () => {
 
@@ -37,8 +37,48 @@ import styles from "../styles/HomePage.module.css";
 
 // export default HomePage;
 
+// import { Helmet } from "react-helmet-async";
+// import { useTranslation } from "react-i18next";
+// import styles from "../styles/HomePage.module.css";
+
+// const HomePage = () => {
+//   const { t } = useTranslation(); // Використовуємо хук для перекладу
+
+//   return (
+//     <>
+//       <Helmet>
+//         <title>
+//           {t("home_title")} | Home - Юрій Шевченко | Yuri Shevchenko
+//         </title>
+//         <meta name="description" content={t("home_description")} />
+//       </Helmet>
+//       <div className="container">
+//         <div className={styles.homePage}>
+//           <div>
+//             <h1>Yuri Shevchenko</h1>
+//             <p className={styles.description}>
+//               {t("home_content")} {/* Використовуємо переклад */}
+//             </p>
+//           </div>
+//           <img
+//             className={styles.photo}
+//             src="/images/Sheva1.jpg"
+//             alt={t("home_photo_alt")} // Використовуємо переклад //
+//           />
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default HomePage;
+
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+import styles from "../styles/HomePage.module.css";
+
 const HomePage = () => {
-  const { t } = useTranslation(); // Використовуємо хук для перекладу
+  const { t } = useTranslation();
 
   return (
     <>
@@ -50,16 +90,18 @@ const HomePage = () => {
       </Helmet>
       <div className="container">
         <div className={styles.homePage}>
-          <div>
-            <h1>Yuri Shevchenko</h1>
-            <p className={styles.description}>
-              {t("home_content")} {/* Використовуємо переклад */}
-            </p>
+          <div className={styles.leftSection}>
+            <img
+              className={styles.newPhoto}
+              src="/images/Sheva-black-min.png"
+              alt={t("home_photo_alt")}
+            />
+            <p className={styles.description}>{t("home_content")}</p>
           </div>
           <img
             className={styles.photo}
-            src="/images/Sheva1.jpg"
-            alt={t("home_photo_alt")} // Використовуємо переклад //
+            src="/images/ShevaHome-min.jpg"
+            alt={t("home_photo_alt")}
           />
         </div>
       </div>

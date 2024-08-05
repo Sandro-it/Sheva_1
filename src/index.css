@@ -94,9 +94,18 @@ p {
 }
 
 [data-theme="dark"] {
-  --background-color: #132946;
+  --background-color: #070f1a;
   --text-color: #ffffff;
-  --heading-color: #928c8c;
+  --heading-color: #e0e0e0;
   --paragraph-color: #e0e0e0;
   /* інші кольори для темної теми */
+}
+
+[data-theme="dark"] p {
+  font-weight: 300; /* Тонкий шрифт */
+}
+
+[data-theme="dark"] h1,
+h2 {
+  font-weight: 600; /* Тонкий шрифт */
 }
