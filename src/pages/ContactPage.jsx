@@ -442,8 +442,15 @@ import styles from "../styles/ContactPage.module.css";
 
 // Використання змінних середовища
 const EMAIL_SERVICE_ID = process.env.REACT_APP_EMAIL_SERVICE_ID;
+console.log("Service ID:", process.env.REACT_APP_EMAIL_SERVICE_ID);
 const EMAIL_TEMPLATE_ID = process.env.REACT_APP_EMAIL_TEMPLATE_ID;
+console.log("Template ID:", process.env.REACT_APP_EMAIL_TEMPLATE_ID);
 const EMAIL_USER_ID = process.env.REACT_APP_EMAIL_USER_ID;
+console.log("User ID:", process.env.REACT_APP_EMAIL_USER_ID);
+
+// const EMAIL_SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
+// const EMAIL_TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+// const EMAIL_USER_ID = import.meta.env.VITE_EMAIL_USER_ID;
 
 const ContactPage = () => {
   const { t } = useTranslation();
