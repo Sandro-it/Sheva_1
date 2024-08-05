@@ -434,23 +434,163 @@
 // export default ContactPage;
 
 //===================приховування данних=====================//
+// import { Helmet } from "react-helmet-async";
+// import { useState } from "react";
+// import { useTranslation } from "react-i18next";
+// import emailjs from "@emailjs/browser";
+// import styles from "../styles/ContactPage.module.css";
+
+// // Використання змінних середовища
+// // const EMAIL_SERVICE_ID = process.env.REACT_APP_EMAIL_SERVICE_ID;
+// // console.log("Service ID:", process.env.REACT_APP_EMAIL_SERVICE_ID);
+// // const EMAIL_TEMPLATE_ID = process.env.REACT_APP_EMAIL_TEMPLATE_ID;
+// // console.log("Template ID:", process.env.REACT_APP_EMAIL_TEMPLATE_ID);
+// // const EMAIL_USER_ID = process.env.REACT_APP_EMAIL_USER_ID;
+// // console.log("User ID:", process.env.REACT_APP_EMAIL_USER_ID);
+
+// // const EMAIL_SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
+// // const EMAIL_TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+// // const EMAIL_USER_ID = import.meta.env.VITE_EMAIL_USER_ID;
+
+// const ContactPage = () => {
+//   const { t } = useTranslation();
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [message, setMessage] = useState("");
+//   const [errors, setErrors] = useState({});
+//   const [isSubmitted, setIsSubmitted] = useState(false);
+
+//   const validate = () => {
+//     const errors = {};
+//     if (name.length < 3 || name.length > 30) {
+//       errors.name = t("contact_form_error_name");
+//     }
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     if (!emailRegex.test(email)) {
+//       errors.email = t("contact_form_error_email");
+//     }
+//     if (message.length < 10 || message.length > 500) {
+//       errors.message = t("contact_form_error_message");
+//     }
+//     return errors;
+//   };
+
+//   // Функція для скидання помилок при фокусуванні на полі введення
+//   const handleFocus = (field) => {
+//     setErrors((prevErrors) => {
+//       const newErrors = { ...prevErrors };
+//       delete newErrors[field];
+//       return newErrors;
+//     });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     const validationErrors = validate();
+//     if (Object.keys(validationErrors).length > 0) {
+//       setErrors(validationErrors);
+//     } else {
+//       emailjs
+//         .sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, e.target, EMAIL_USER_ID)
+//         .then(
+//           (result) => {
+//             console.log(result.text);
+//             alert(t("contact_form_success"));
+//             setIsSubmitted(true);
+//           },
+//           (error) => {
+//             console.log(error.text);
+//             alert(t("contact_form_error"));
+//           }
+//         );
+//     }
+//   };
+
+//   return (
+//     <>
+//       <Helmet>
+//         <title>{t("contact_title")} | Yuri Shevchenko</title>
+//         <meta name="description" content={t("contact_description")} />
+//       </Helmet>
+//       <div className="container">
+//         <div className={styles.contactPage}>
+//           <div className={styles.leftColumn}>
+//             <h2>{t("contact_rights_managers")}</h2>
+//             <p>{t("contact_info")}</p>
+//             <p>{t("contact_help")}</p>
+//             <p>
+//               {t("contact_email")}: <strong>shevchenko.legacy@gmail.com</strong>
+//             </p>
+//           </div>
+//           <div className={styles.rightColumn}>
+//             <form className={styles.contactForm} onSubmit={handleSubmit}>
+//               <div className={styles.formGroup}>
+//                 <label htmlFor="name">{t("contact_form_name_label")}</label>
+//                 <input
+//                   type="text"
+//                   id="name"
+//                   name="from_name"
+//                   value={name}
+//                   onChange={(e) => setName(e.target.value)}
+//                   onFocus={() => handleFocus("name")}
+//                   placeholder={t("contact_form_name_placeholder")}
+//                   className={errors.name ? styles.inputError : ""}
+//                 />
+//                 {errors.name && (
+//                   <p className={styles.errorText}>{errors.name}</p>
+//                 )}
+//               </div>
+//               <div className={styles.formGroup}>
+//                 <label htmlFor="email">{t("contact_form_email_label")}</label>
+//                 <input
+//                   type="email"
+//                   id="email"
+//                   name="from_email"
+//                   value={email}
+//                   onChange={(e) => setEmail(e.target.value)}
+//                   onFocus={() => handleFocus("email")}
+//                   placeholder={t("contact_form_email_placeholder")}
+//                   className={errors.email ? styles.inputError : ""}
+//                 />
+//                 {errors.email && (
+//                   <p className={styles.errorText}>{errors.email}</p>
+//                 )}
+//               </div>
+//               <div className={styles.formGroup}>
+//                 <label htmlFor="message">
+//                   {t("contact_form_message_label")}
+//                 </label>
+//                 <textarea
+//                   id="message"
+//                   name="message"
+//                   value={message}
+//                   onChange={(e) => setMessage(e.target.value)}
+//                   onFocus={() => handleFocus("message")}
+//                   placeholder={t("contact_form_message_placeholder")}
+//                   className={errors.message ? styles.inputError : ""}
+//                   rows="5"
+//                 />
+//                 {errors.message && (
+//                   <p className={styles.errorText}>{errors.message}</p>
+//                 )}
+//               </div>
+//               <button type="submit" disabled={isSubmitted}>
+//                 {t("contact_form_submit_button")}
+//               </button>
+//             </form>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default ContactPage;
+
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import emailjs from "@emailjs/browser";
 import styles from "../styles/ContactPage.module.css";
-
-// Використання змінних середовища
-const EMAIL_SERVICE_ID = process.env.REACT_APP_EMAIL_SERVICE_ID;
-console.log("Service ID:", process.env.REACT_APP_EMAIL_SERVICE_ID);
-const EMAIL_TEMPLATE_ID = process.env.REACT_APP_EMAIL_TEMPLATE_ID;
-console.log("Template ID:", process.env.REACT_APP_EMAIL_TEMPLATE_ID);
-const EMAIL_USER_ID = process.env.REACT_APP_EMAIL_USER_ID;
-console.log("User ID:", process.env.REACT_APP_EMAIL_USER_ID);
-
-// const EMAIL_SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
-// const EMAIL_TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
-// const EMAIL_USER_ID = import.meta.env.VITE_EMAIL_USER_ID;
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -475,7 +615,6 @@ const ContactPage = () => {
     return errors;
   };
 
-  // Функція для скидання помилок при фокусуванні на полі введення
   const handleFocus = (field) => {
     setErrors((prevErrors) => {
       const newErrors = { ...prevErrors };
@@ -484,25 +623,34 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      emailjs
-        .sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, e.target, EMAIL_USER_ID)
-        .then(
-          (result) => {
-            console.log(result.text);
-            alert(t("contact_form_success"));
-            setIsSubmitted(true);
+      try {
+        const response = await fetch("/api/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
           },
-          (error) => {
-            console.log(error.text);
-            alert(t("contact_form_error"));
-          }
-        );
+          body: JSON.stringify({
+            from_name: name,
+            from_email: email,
+            message,
+          }),
+        });
+
+        if (response.ok) {
+          alert(t("contact_form_success"));
+          setIsSubmitted(true);
+        } else {
+          alert(t("contact_form_error"));
+        }
+      } catch (error) {
+        alert(t("contact_form_error"));
+      }
     }
   };
 
